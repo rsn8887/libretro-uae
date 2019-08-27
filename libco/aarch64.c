@@ -88,7 +88,7 @@ cothread_t co_create(unsigned int size, void (*entrypoint)(void))
    ptr[5]  = 0; /* x13 */
    ptr[6]  = 0; /* x14 */
    ptr[7]  = 0; /* x15 */
-   ptr[8]  = 0; /* x18 */
+   ptr[8]  = 0; /* padding */
    ptr[9]  = 0; /* x19 */
    ptr[10] = 0; /* x20 */
    ptr[11] = 0; /* x21 */
@@ -126,4 +126,3 @@ void co_switch(cothread_t handle)
 #ifdef __cplusplus
 }
 #endif
-
